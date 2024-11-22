@@ -1,0 +1,13 @@
+.ticket-name{
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+}
+
+label{
+    font-weight: 700;
+}
+.dx-list-item-content{
+    white-space: normal;
+
+}
