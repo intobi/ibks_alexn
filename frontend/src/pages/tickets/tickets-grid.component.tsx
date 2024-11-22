@@ -1,5 +1,5 @@
 
-import DataGrid, { Column, Paging, Pager, DataGridTypes, Editing, Sorting } from "devextreme-react/data-grid";
+import DataGrid, { Column, Paging, Pager, DataGridTypes, Button, Editing, Sorting } from "devextreme-react/data-grid";
 import CustomStore from "devextreme/data/custom_store";
 import { deleteTicket, fetchTickets } from "../../services/tickets.service";
 import { useCallback, useRef } from "react";
@@ -7,7 +7,7 @@ import { confirm } from "devextreme/ui/dialog";
 import { useNavigate } from "react-router-dom";
 
 import "./tickets-grid.component.css";
-import Button from "devextreme-react/cjs/button";
+import SingleButton from "devextreme-react/cjs/button";
 
 const allowedPageSizes: (DataGridTypes.PagerPageSize | number)[] = [5, 10, 20];
 
@@ -51,7 +51,7 @@ function Tickets() {
             <h2 className="mt-5">Tickets</h2>
           </div>
           <div className="col align-items-end d-flex justify-content-end">
-              <Button type="success" className="mb-3" width={200} text="Add Ticket" onClick={() => navigate("/tickets")} />
+              <SingleButton type="success" className="mb-3" width={200} text="Add Ticket" onClick={() => navigate("/tickets")} />
           </div>
         </div>
         <div className="row">
